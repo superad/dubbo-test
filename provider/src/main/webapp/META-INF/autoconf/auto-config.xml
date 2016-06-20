@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<script>
+		<generate template="WEB-INF/classes/dubbo-provider.xml" />
+		<generate template="WEB-INF/classes/logback.xml" />
+	</script>
+</config>

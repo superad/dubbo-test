@@ -1,0 +1,53 @@
+<!DOCTYPE web-app PUBLIC
+        "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+        "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         version="2.4">
+    <servlet>
+        <servlet-name>springMvc</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>classpath:spring-config.xml</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>springMvc</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GateWayDeal</servlet-name>
+        <servlet-class>com.bestpay.test.provider.billcenter.impl.GateWayDeal</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GateWayDeal</servlet-name>
+        <url-pattern>/GateWayDeal</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GateWayPay</servlet-name>
+        <servlet-class>com.bestpay.test.provider.billcenter.impl.GateWayPay</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GateWayPay</servlet-name>
+        <url-pattern>/GateWayPay</url-pattern>
+    </servlet-mapping>
+
+   <servlet>
+       <servlet-name>dubbo</servlet-name>
+       <servlet-class>com.alibaba.dubbo.remoting.http.servlet.DispatcherServlet</servlet-class>
+       <load-on-startup>1</load-on-startup>
+   </servlet>
+    <servlet-mapping>
+        <servlet-name>dubbo</servlet-name>
+        <url-pattern>/hessian/*</url-pattern>
+    </servlet-mapping>
+
+
+
+</web-app>

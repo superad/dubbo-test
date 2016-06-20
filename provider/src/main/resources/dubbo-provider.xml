@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+       <dubbo:application name="dubbo-test"/>
+
+       <dubbo:registry protocol="zookeeper" address="${zookeeper_address}"/>
+
+       <dubbo:protocol name="hessian" path="hessian" port="${hessian_port}" server="servlet" />
+
+       <dubbo:protocol name="dubbo" port="${dubbo_port}"/>
+
+       <dubbo:service protocol="hessian"  path="IEnterpriseAccountFacade" timeout="5000"
+                      interface="com.bestpay.test.provider.billcenter.IEnterpriseAccountFacade"  ref="enterpriseAccountFacadeImpl" />
+       <dubbo:service protocol="hessian"   path="IEnterpriseAccountChargeService"  timeout="5000"
+                      interface="com.bestpay.test.provider.billcenter.IEnterpriseAccountChargeService" ref="enterpriseAccountChargeServiceImpl"  />
+
+
+       <dubbo:service protocol="dubbo" interface="com.bestpay.cf.commonservice.interfaze.service.SeqNoService" ref="seqServiceImpl" timeout="5000"/>
+
+</beans>
