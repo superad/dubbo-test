@@ -97,11 +97,7 @@
             <groupId>com.bestpay.paycenter</groupId>
             <artifactId>paycenter-gateway-bank-api</artifactId>
         </dependency>
-     <!--   <dependency>
-            <groupId>com.bestpay.account</groupId>
-            <artifactId>account-manager-api</artifactId>
-        </dependency>-->
-        <dependency>
+       <dependency>
             <groupId>com.bestpay.cifcore</groupId>
             <artifactId>product-service-facade</artifactId>
         </dependency>

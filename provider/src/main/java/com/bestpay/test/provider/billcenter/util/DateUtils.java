@@ -1,6 +1,7 @@
 package com.bestpay.test.provider.billcenter.util;
 
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Test;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -24,6 +25,13 @@ public class DateUtils {
         }
 
 
+    }
+
+    @Test
+    public void test(){
+      String date=  formatDate(new Date(),"yyyy-MM-dd");
+        System.out.println(date);
+        log.info("date==>{}",date);
     }
 
 }

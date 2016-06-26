@@ -12,8 +12,8 @@ import java.util.Date;
 /**
  * Created by fgm on 2016/6/3.
  */
-@Service
 @Slf4j
+@Service
 public class SeqServiceImpl implements SeqNoService {
     public Response<SeqNoRspBean> getSeqNo(SeqNoReqBean seqNoReqBean) {
         log.info("CommonServiceImpl invoke success!");

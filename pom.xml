@@ -36,7 +36,7 @@
         <jstl.version>1.2</jstl.version>
         <jackson.databind.version>2.4.2</jackson.databind.version>
         <hessian.version>4.0.7</hessian.version>
-        <lombok.version>0.11.4</lombok.version>
+        <lombok.version>1.16.8</lombok.version>
         <httpclient.version>4.5.1</httpclient.version>
         <mybatis.spring.version>1.2.0</mybatis.spring.version>
         <mybatis.version>3.2.1</mybatis.version>
